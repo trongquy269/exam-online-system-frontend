@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@layer base {
+	@font-face {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+	}
+}
+
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #aaa #eee;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #eee;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #aaa;
+	border-radius: 20px;
+	border: 3px solid #eee;
+}
+
+.min-h-screen {
+	--header-height: 56px;
+	--footer-height: 248px;
+	--top-gap: 40px;
+	--bottom-gap: 48px;
+	min-height: calc(
+		100vh - var(--header-height) - var(--footer-height) - var(--top-gap) -
+			var(--bottom-gap)
+	);
+}
